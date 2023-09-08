@@ -1,6 +1,61 @@
-.share_title {
+.share {
+    display: flex;
+    align-items: center;
+ 
+    
+
+     &__title {
+        font-size: 1.8rem;
+        font-family: $font-open-sans-semiB;
+        text-transform: uppercase;
+        color: $color-form-titles;
+    }
+
+    &__icon{
+        padding-right: 1rem;
+        color: $color-icon-btn;
+        
+    }
+}
+ 
+
+
+
+.btn_create-card {
+background-color: $color-icon-btn;
+color: $white-two;
+font-size: 1.8rem;
+font-family: $font-open-sans-semiB;
+text-transform: uppercase;
+padding: 1.1rem 1.7rem;
+border-radius: 1rem;
+border: 0;
+box-shadow: 0 3px 8px rgba(0, 0, 0, 0.404);
+
+}
+
+
+
+.share__result__title {
     font-size: 1.8rem;
     font-family: $font-open-sans-semiB;
-    text-transform: uppercase;
     color: $color-form-titles;
+
+}
+
+.btn_share {
+    background-color: black;
+    color: $white-two;
+    font-family: $font-open-sans-regular;
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem 0.5rem 3.5rem;
+    border-radius: 0.5rem;
+    border: 0;
+    
+
+}
+
+.fa-x-twitter{
+    color: white;
+    // ESTO ES EL ICONO DE X QUE ESTÁ EN BLANCO 
 }
