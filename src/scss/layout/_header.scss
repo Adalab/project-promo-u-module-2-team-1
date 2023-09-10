@@ -3,8 +3,14 @@
   background-color: $background-color-landing;
   display: flex;
   justify-content: center;
-
   &__logo {
     max-width: 25rem;
+  }
+}
+.header-form {
+  padding: 3.1rem 0 3rem 4rem;
+  background-color: $white-two;
+  &__logo {
+    max-width: 20.1rem;
   }
 }
