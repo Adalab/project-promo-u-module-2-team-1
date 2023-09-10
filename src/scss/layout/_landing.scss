@@ -1,0 +1,78 @@
+.landing {
+  background-color: $background-color-landing;
+  padding: 3.54rem 0 3rem;
+  &__title {
+    margin: auto;
+    max-width: 23rem;
+    font-family: $font-merriweather;
+    font-weight: 900;
+    font-size: 1.98rem;
+    color: $color-icon-btn;
+  }
+  &__text {
+    margin: auto;
+    max-width: 26.4rem;
+    text-align: center;
+    font-family: $font-open-sans-regular;
+    font-weight: 400;
+    font-size: 1.28rem;
+    color: $color-palette-1-1;
+  }
+  &__icons-box {
+    margin: 1.78rem auto;
+    display: flex;
+    justify-content: space-around;
+    max-width: 26.8rem;
+    height: 7.4rem;
+    border: 0.2rem solid $color-border-opacity;
+    border-radius: 0.5rem;
+  }
+  &__icon-and-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+  }
+  &__icon {
+    color: $color-icon-btn;
+  }
+  &__icon-text {
+    font-family: $font-open-sans-regular;
+    font-weight: 400;
+    font-size: 1.28rem;
+    color: $color-form-titles;
+  }
+  &__button {
+    margin: 3.86rem auto 0;
+    display: block;
+    max-width: 12.9rem;
+    height: 4rem;
+    border-radius: 5rem;
+    border: 0.2rem solid $color-palette-1-2;
+    background-color: $color-palette-1-2;
+
+    font-family: $font-open-sans-semiB;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: $white-two;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+    text-align: center;
+    line-height: 3.8rem; /* same as height minus border*2 to center text */
+
+    transition: color 0.5s, background-color 0.5s, transform 1s;
+    &:hover {
+      color: $color-palette-1-2;
+      background-color: $white-two;
+      &::before {
+        content: '¡';
+      }
+      &::after {
+        content: '!';
+      }
+    }
+  }
+}

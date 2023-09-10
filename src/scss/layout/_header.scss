@@ -1,0 +1,10 @@
+.header-landing {
+  padding: 9.5rem 0 0;
+  background-color: $background-color-landing;
+  display: flex;
+  justify-content: center;
+
+  &__logo {
+    max-width: 25rem;
+  }
+}
