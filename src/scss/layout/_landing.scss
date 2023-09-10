@@ -22,6 +22,7 @@
     margin: 1.78rem auto;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     max-width: 26.8rem;
     height: 7.4rem;
     border: 0.2rem solid $color-border-opacity;
@@ -29,9 +30,8 @@
   }
   &__icon-and-text {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     width: 6rem;
   }
   &__icon {
@@ -58,7 +58,6 @@
     color: $white-two;
 
     text-transform: uppercase;
-
     text-decoration: none;
     text-align: center;
     line-height: 3.8rem; /* same as height minus border*2 to center text */
