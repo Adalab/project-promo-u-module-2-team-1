@@ -1,19 +1,58 @@
-h2 {
-  font-size: 24px;
+.design {
+  padding: 30px;
+}
+
+.design-cont-header {
+  display: flex;
+  gap: 10px;
+  .design-icon {
+    color: $color-icon-btn;
+  }
+  .design__title {
+    font-size: 1.8rem;
+    font-family: $font-open-sans-semiB;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #54585a;
+  }
+}
+
+.design-radio-sec {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 80vw;
+  padding: 1.2rem;
+}
+
+.title {
+  grid-row: span 3;
+  font-family: $font-open-sans-regular;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+.design-radio-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 //Grupo de primera paleta de colores
 .palette-1-1 {
+  display: inline-block;
   width: 30px;
   height: 25px;
   background-color: $color-palette-1-1;
 }
 .palette-2-1 {
+  display: inline-block;
   width: 30px;
   height: 25px;
   background-color: $color-palette-1-2;
 }
 .palette-3-1 {
+  display: inline-block;
   width: 30px;
   height: 25px;
   background-color: $color-palette-1-3;
@@ -21,16 +60,19 @@ h2 {
 
 //Grupo de segunda paleta de colores
 .palette-1-2 {
+  display: inline-block;
   width: 30px;
   height: 25px;
   background-color: $color-palette-2-1;
 }
 .palette-2-2 {
+  display: inline-block;
   width: 30px;
   height: 25px;
   background-color: $color-palette-2-2;
 }
 .palette-3-2 {
+  display: inline-block;
   width: 30px;
   height: 25px;
   background-color: $color-palette-2-3;
@@ -38,16 +80,19 @@ h2 {
 
 //Grupo de tercera paleta de colores
 .palette-1-3 {
+  display: inline-block;
   width: 30px;
   height: 25px;
   background-color: $color-palette-3-1;
 }
 .palette-2-3 {
+  display: inline-block;
   width: 30px;
   height: 25px;
   background-color: $color-palette-3-2;
 }
 .palette-3-3 {
+  display: inline-block;
   width: 30px;
   height: 25px;
   background-color: $color-palette-3-3;
