@@ -1,11 +1,12 @@
  .preview {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     margin: auto;
     background-image: linear-gradient(to bottom, #bfcdd0 ,#dde9ed );
     padding-bottom: 4rem;
+    padding-left: 4.5rem;
     
     &__button {
         font-family: $font-open-sans-regular;
@@ -13,11 +14,13 @@
         color: $color-form-titles;
         line-height: 2rem;
         border-radius: 5rem;
-        border: 1rem $white-two solid;
-        width: 7.2rem;
-        height: 2rem;
+        border: 0.1rem $white-two solid;
+        width: 7.5rem;
+        height: 3rem;
         margin-top: 3.8rem;
         background-color: #bfcdd0;
+        text-align: center;
+        padding-top: 0.5rem;
     }
 
     .preview__card {
@@ -44,6 +47,10 @@
             font-weight: 400;
             margin-left: 2rem;
             margin-bottom: 1rem;
+        }
+
+        .preview__lateral-decoration {
+            border-left: solid $color-button 0.5rem;
         }
 
         .preview__card-img {
