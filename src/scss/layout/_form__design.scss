@@ -1,19 +1,38 @@
 .design {
-  padding: 30px;
-}
-
-.design-cont-header {
-  display: flex;
-  gap: 10px;
-  .design-icon {
-    color: $color-icon-btn;
+  border: none;
+  padding: 2.5rem 2rem 1rem;
+  max-width: 500px;
+  // background-image: linear-gradient(
+  //   to bottom,
+  //   $background-color-landing,
+  //   $white-two
+  // );
+  &-cont {
+    display: flex;
+    flex-direction: column;
   }
-  .design__title {
-    font-size: 1.8rem;
-    font-family: $font-open-sans-semiB;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #54585a;
+  &-cont-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    &-icon {
+      color: $color-icon-btn;
+      font-size: 1.8rem;
+    }
+    &-title {
+      font-size: 1.8rem;
+      font-family: $font-open-sans-semiB;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #54585a;
+    }
+    &-arrow {
+      color: $color-form-titles;
+      margin-left: auto;
+      font-size: 2rem;
+      font-weight: 0;
+    }
   }
 }
 
@@ -21,79 +40,100 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  width: 80vw;
-  padding: 1.2rem;
+  // width: 100%;
+  &-title {
+    color: $color-form-titles;
+    margin-top: 1rem;
+    grid-row: span 3;
+    font-family: $font-open-sans-regular;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+  }
 }
 
-.title {
-  grid-row: span 3;
-  font-family: $font-open-sans-regular;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-}
-
-.design-radio-group {
+.design-radio-group-1 {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1.1rem 0 1.1rem 0;
+  .palette {
+    display: flex;
+    &-1-1 {
+      @include divColorSize(30px, 25px);
+      background-color: $color-palette-1-1;
+    }
+    &-2-1 {
+      @include divColorSize(30px, 25px);
+      background-color: $color-palette-1-2;
+    }
+    &-3-1 {
+      @include divColorSize(30px, 25px);
+      background-color: $color-palette-1-3;
+    }
+  }
 }
 
-//Grupo de primera paleta de colores
-.palette-1-1 {
-  display: inline-block;
-  width: 30px;
-  height: 25px;
-  background-color: $color-palette-1-1;
-}
-.palette-2-1 {
-  display: inline-block;
-  width: 30px;
-  height: 25px;
-  background-color: $color-palette-1-2;
-}
-.palette-3-1 {
-  display: inline-block;
-  width: 30px;
-  height: 25px;
-  background-color: $color-palette-1-3;
-}
-
-//Grupo de segunda paleta de colores
-.palette-1-2 {
-  display: inline-block;
-  width: 30px;
-  height: 25px;
-  background-color: $color-palette-2-1;
-}
-.palette-2-2 {
-  display: inline-block;
-  width: 30px;
-  height: 25px;
-  background-color: $color-palette-2-2;
-}
-.palette-3-2 {
-  display: inline-block;
-  width: 30px;
-  height: 25px;
-  background-color: $color-palette-2-3;
+.design-radio-group-2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1.1rem 0 1.1rem 0;
+  .palette {
+    display: flex;
+    &-1-2 {
+      @include divColorSize(30px, 25px);
+      background-color: $color-palette-2-1;
+    }
+    &-2-2 {
+      @include divColorSize(30px, 25px);
+      background-color: $color-palette-2-2;
+    }
+    &-3-2 {
+      @include divColorSize(30px, 25px);
+      background-color: $color-palette-2-3;
+    }
+  }
 }
 
-//Grupo de tercera paleta de colores
-.palette-1-3 {
-  display: inline-block;
-  width: 30px;
-  height: 25px;
-  background-color: $color-palette-3-1;
+.design-radio-group-3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1.1rem 0 1.1rem 0;
+  .palette {
+    display: flex;
+    &-1-3 {
+      @include divColorSize(30px, 25px);
+      background-color: $color-palette-3-1;
+    }
+    &-2-3 {
+      @include divColorSize(30px, 25px);
+      background-color: $color-palette-3-2;
+    }
+    &-3-3 {
+      @include divColorSize(30px, 25px);
+      background-color: $color-palette-3-3;
+    }
+  }
 }
-.palette-2-3 {
-  display: inline-block;
-  width: 30px;
-  height: 25px;
-  background-color: $color-palette-3-2;
+
+/* Estilo para los botones de radio */
+input[type='radio'] {
+  /* Oculta el botón de radio predeterminado */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px; /* Ajusta el tamaño del botón según tus necesidades */
+  height: 16px; /* Ajusta el tamaño del botón según tus necesidades */
+  border: 2px solid #3498db; /* Color del borde azul */
+  border-radius: 50%; /* Hace que el botón sea circular */
+  background: white; /* Color de fondo blanco */
 }
-.palette-3-3 {
-  display: inline-block;
-  width: 30px;
-  height: 25px;
-  background-color: $color-palette-3-3;
+
+/* Estilo para los botones de radio cuando están seleccionados */
+input[type='radio']:checked {
+  background: #3498db;
 }
