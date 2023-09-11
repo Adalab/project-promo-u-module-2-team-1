@@ -1,0 +1,63 @@
+ .preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    
+    .preview__button {
+        font-family: $font-open-sans-regular;
+        font-size: 1.2rem;
+        color: $color-form-titles;
+        line-height: 2rem;
+        border-radius: 6rem;
+        width: 7.2rem;
+        height: 2rem;
+        margin-top: 3.8rem;
+    }
+
+    .preview__card {
+        width: 24rem;
+        margin-top: 2rem;
+        background-color: $white-two;
+        border: solid red 2px;  /*QUITAR*/
+
+        .preview__card-id {
+            font-family: $font-montserrat-bold;
+            font-size: 1.8rem;
+            color: $color-palette-1-1;
+            font-weight: 700;
+            margin-left: 2rem;
+            margin-top: 2.1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .preview__card-job {
+            font-family: $font-montserrat-regular;
+            font-size: 1.6rem;
+            color: $color-form-titles;
+            font-weight: 400;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .preview__card-img {
+            width: 24rem;
+        }
+        }
+
+        .preview__card-icons{
+            gap: 1rem;
+            margin-bottom: 2rem;
+
+            .icon-mobile, .icon-mail, .icon-in, .icon-git {
+                color: $color-palette-1-1;
+                width: 1.2rem;
+                gap: 1rem;
+                border: solid $color-palette-1-3 0.2rem;
+                border-radius: 50% 50%;
+                padding: 0.5rem;
+                align-items: center;
+            }
+        }
+    }
