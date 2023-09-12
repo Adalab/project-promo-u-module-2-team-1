@@ -1,12 +1,12 @@
 .design {
   border: none;
   padding: 2.5rem 2rem 1rem;
-  max-width: 500px;
-  // background-image: linear-gradient(
-  //   to bottom,
-  //   $background-color-landing,
-  //   $white-two
-  // );
+  background-image: linear-gradient(
+    to bottom,
+    $background-color-landing,
+    $white-two
+  );
+  border-bottom: solid 1px $line-white;
   &-cont {
     display: flex;
     flex-direction: column;
@@ -16,6 +16,7 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 1rem;
+    max-width: 500px;
     &-icon {
       color: $color-icon-btn;
       font-size: 1.8rem;
@@ -41,6 +42,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   // width: 100%;
+  max-width: 500px;
   &-title {
     color: $color-form-titles;
     margin-top: 1rem;
@@ -122,18 +124,15 @@
 
 /* Estilo para los botones de radio */
 input[type='radio'] {
-  /* Oculta el botón de radio predeterminado */
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 16px; /* Ajusta el tamaño del botón según tus necesidades */
-  height: 16px; /* Ajusta el tamaño del botón según tus necesidades */
-  border: 2px solid #3498db; /* Color del borde azul */
-  border-radius: 50%; /* Hace que el botón sea circular */
-  background: white; /* Color de fondo blanco */
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: white;
 }
 
 /* Estilo para los botones de radio cuando están seleccionados */
 input[type='radio']:checked {
-  background: #3498db;
+  appearance: none;
+  background: #fff;
+  border: 6px solid #3498db;
 }
