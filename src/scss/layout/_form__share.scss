@@ -1,26 +1,41 @@
 .form__share{
     border-color: transparent;
+    padding: 2.5rem 2rem 1rem;
 }
+
 .share {
     display: flex;
-    
-    align-items: center;
-    margin-bottom: 3rem;
+    flex-direction: column;
 
- 
-    
+    &__box{
+     display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 3rem;
+     max-width: 500px;
+    }
+
+    &__icon{
+        color: $color-icon-btn;
+        font-size: 1.8rem;
+        
+    }
+
      &__title {
         font-size: 1.8rem;
         font-family: $font-open-sans-semiB;
         text-transform: uppercase;
         color: $color-form-titles;
-        
+        font-weight: 600;
+        cursor: pointer;
     }
 
-    &__icon{
-        padding-right: 1rem;
-        color: $color-icon-btn;
-        
+    &__arrow{
+        color: $color-form-titles;
+        margin-left: auto;
+        font-size: 2rem;
+        font-weight: 0;
+   
     }
 }
 
@@ -44,6 +59,9 @@ border-radius: 1rem;
 border: 0;
 box-shadow: 0 3px 8px rgba(0, 0, 0, 0.404);
 }
+
+.btn_create-card:visited{background-color: $white;}
+
 
 .border {
     border-top: 1px solid $line-white;
@@ -73,8 +91,12 @@ box-shadow: 0 3px 8px rgba(0, 0, 0, 0.404);
 
 }
 
-.btn_share {
-    width: 18.1rem;
+.btn_share-twitter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    width: 16rem;
     height: 3rem;
     background-color: black;
     color: $white-two;
@@ -83,14 +105,12 @@ box-shadow: 0 3px 8px rgba(0, 0, 0, 0.404);
     border-radius: 0.5rem;
     border: 0;
     text-decoration: none;
-    text-align: center;
     
-    
-
-}
 
 .fa-x-twitter{
     color: $white-two;
     
+    
+} 
 }
 
