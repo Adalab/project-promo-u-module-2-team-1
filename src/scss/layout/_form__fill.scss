@@ -46,16 +46,24 @@
 }
 .form__fill__file {
   text-align: center;
-}
 
-.form__fill__file__button {
-  font-family: $font-open-sans-regular;
-  font-size: 1.4rem;
-  color: #ffffff;
-  background-color: $color-icon-btn;
-  padding: 0.3rem 2.2rem 0.7rem;
-  margin-right: 162px;
+  &__button {
+    font-family: $font-open-sans-regular;
+    font-size: 1.4rem;
+    color: #ffffff;
+    background-color: $color-icon-btn;
+    padding: 0.3rem 2.2rem 0.7rem;
+    margin-right: 16.2rem;
+    border-radius: 3px;
+  }
+  &__input {
+    display: none;
+  }
 }
-.form__fill__file__input {
-  display: none;
+.cuad {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 3px;
+  border: 1px solid $color-palette-1-3;
+  margin-left: 18rem;
 }
