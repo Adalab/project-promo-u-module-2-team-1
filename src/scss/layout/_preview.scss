@@ -29,6 +29,8 @@
         background-color: $white-two;
         border: solid 1px rgba(0, 0, 0, 0.35);
         box-sizing: content-box;
+        border-radius: 0.3rem;
+        box-shadow: 2px 2px 0px $color-silver;
 
         .preview__card-id {
             font-family: $font-montserrat-bold;
@@ -64,6 +66,7 @@
             display: flex;
             align-items: center;
             margin-left: 2rem;
+            cursor: pointer;
 
 
             & a{
