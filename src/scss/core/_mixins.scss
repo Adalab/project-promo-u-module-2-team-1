@@ -1,0 +1,4 @@
+@mixin divColorSize($width, $height) {
+  width: $width;
+  height: $height;
+}
