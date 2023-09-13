@@ -1,7 +1,7 @@
 // Placeholder clase?
 
 .form__fill {
-  box-shadow: none;
+  // box-shadow: none;
   border-style: none;
   margin-left: 1.9rem;
   background: linear-gradient($white-four, $white-two);
@@ -28,6 +28,7 @@
     font-size: 1.4 rem;
     color: $color-palette-1-1;
     border-color: $color-palette-1-3;
+    border-style: solid;
   }
   &__icon {
     display: flex;
@@ -46,8 +47,12 @@
 }
 .form__fill__file {
   text-align: center;
-
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
   &__button {
+    display: block;
+    width: 15rem;
     font-family: $font-open-sans-regular;
     font-size: 1.4rem;
     color: #ffffff;
@@ -55,6 +60,7 @@
     padding: 0.3rem 2.2rem 0.7rem;
     margin-right: 16.2rem;
     border-radius: 3px;
+    margin-top: 0.7rem;
   }
   &__input {
     display: none;
@@ -65,5 +71,7 @@
   width: 3rem;
   border-radius: 3px;
   border: 1px solid $color-palette-1-3;
-  margin-left: 18rem;
+  // margin-left: 18rem;
+  // transform: translateY(-29px);
+  margin-left: -100px;
 }
