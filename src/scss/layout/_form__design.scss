@@ -1,11 +1,6 @@
 .design {
   border: none;
   padding: 2.5rem 2rem 1rem;
-  background-image: linear-gradient(
-    to bottom,
-    $background-color-landing,
-    $white-two
-  );
   border-bottom: solid 1px $line-white;
   &-cont {
     display: flex;

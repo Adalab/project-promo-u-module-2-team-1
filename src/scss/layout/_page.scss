@@ -1,0 +1,25 @@
+.body__main {
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background-image: linear-gradient(
+    to bottom,
+    $background-color-landing,
+    $white-two
+  );
+
+  @media all and (min-width: 768px) {
+    flex-direction: row;
+    min-height: 100vh;
+  }
+  &-form {
+    @media all and (min-width: 768px) {
+      order: -1;
+      width: 60vw;
+    }
+  }
+}
+.collapsed {
+  display: none;
+}
