@@ -6,7 +6,7 @@ const fill = document.querySelector('.js-fill');
 const share = document.querySelector('.js-share');
 const fillFormContent = document.querySelector('.js-fillFormContent');
 const designFormContent = document.querySelector('.js-designFormContent');
-const shareFormContent = document.querySelector('.js-shareFormContent')
+const shareFormContent = document.querySelector('.js-shareFormContent');
 
 //Datos generales-variables globales
 
