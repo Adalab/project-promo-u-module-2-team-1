@@ -4,30 +4,34 @@
 const design = document.querySelector('.js-design');
 const fill = document.querySelector('.js-fill');
 const share = document.querySelector('.js-share');
+const fillFormContent = document.querySelector('.js-fillFormContent');
+const designFormContent = document.querySelector('.js-designFormContent');
+const shareFormContent = document.querySelector('.js-shareFormContent')
+
 //Datos generales-variables globales
 
 //Funciones
 
 //funciones Open/close Design form
 function openDesign() {
-  design.classList.remove('collapsed');
+  designFormContent.classList.remove('collapsed');
 }
 function closeDesign() {
-  design.classList.add('collapsed');
+  designFormContent.classList.add('collapsed');
 }
 //funciones Open/close Fill form
 function openFill() {
-  fill.classList.remove('collapsed');
+  fillFormContent.classList.remove('collapsed');
 }
 function closeFill() {
-  fill.classList.add('collapsed');
+  fillFormContent.classList.add('collapsed');
 }
 //funciones Open/close Share form
 function openShare() {
-  share.classList.remove('collapsed');
+  shareFormContent.classList.remove('collapsed');
 }
 function closeShare() {
-  share.classList.add('collapsed');
+  shareFormContent.classList.add('collapsed');
 }
 
 //funciones del listener para cada formulario

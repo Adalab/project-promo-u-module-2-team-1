@@ -22,4 +22,8 @@
 }
 .collapsed {
   display: none;
+
+  .rotate__arrow {
+    transform: rotate(180deg);
+  }
 }
