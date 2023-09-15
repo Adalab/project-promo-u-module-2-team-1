@@ -6,16 +6,16 @@
   background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
   padding-bottom: 4rem;
   @media all and (min-width: 768px) {
+    border-radius: 0.6rem;
     width: 40vw;
   }
-  &__div-button{
+  &__div-button {
     width: 24rem;
   }
   &__button {
     font-family: $font-open-sans-regular;
     font-size: 1.2rem;
     color: $color-form-titles;
-    // line-height: 2rem;
     border-radius: 5rem;
     border: 0.1rem $white-two solid;
     width: 7.5rem;
