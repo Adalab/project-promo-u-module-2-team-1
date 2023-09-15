@@ -4,6 +4,7 @@
 const design = document.querySelector('.js-design');
 const fill = document.querySelector('.js-fill');
 const share = document.querySelector('.js-share');
+const designHeader = document.querySelector('.js-design-header');
 //Datos generales-variables globales
 
 //Funciones
