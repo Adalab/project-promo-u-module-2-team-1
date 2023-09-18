@@ -2,17 +2,15 @@
 
 .form__fill {
   border-style: none;
+  margin-top: 1rem;
   padding-bottom: 3rem;
   border-bottom: solid 1px $line-white;
-
 
   &__h1 {
     text-transform: uppercase;
     font-family: $font-open-sans-semiB;
     font-size: 1.8rem;
     color: $color-form-titles;
-    transform: translateX(4rem);
-    margin-top: 1rem;
   }
 
   &__legend {
@@ -32,17 +30,21 @@
     border-style: solid;
   }
   &__icon {
+    // SACO DATOS DE FORM_DESIGN
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    gap: 10px;
     &__keyb {
       font-size: 2.1rem;
       color: $color-icon-btn;
-      transform: translateX(-7.2rem);
+    }
+    //AÑADO CLASE AL SPAN PARA POSICIONAR A LA DCHA
+    &__span-up {
+      margin-left: auto;
     }
     &__up {
-      font-size: 1.8rem;
+      font-size: 2rem; //IGUALO TAMAÑO A LAS OTRAS DOS
       color: $color-form-titles;
-      transform: translateX(15rem);
     }
   }
 }
@@ -72,7 +74,5 @@
   width: 3rem;
   border-radius: 3px;
   border: 1px solid $color-palette-1-3;
-  // margin-left: 18rem;
-  // transform: translateY(-29px);
   margin-left: -100px;
 }

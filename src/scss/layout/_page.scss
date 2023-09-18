@@ -1,5 +1,4 @@
 .body__main {
-  padding: 2rem 4rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -10,10 +9,13 @@
   );
 
   @media all and (min-width: 768px) {
+    padding: 2rem 4rem;
     flex-direction: row;
     min-height: 100vh;
   }
   &-form {
+    padding: 0 2rem;
+
     @media all and (min-width: 768px) {
       order: -1;
       width: 60vw;
@@ -22,4 +24,7 @@
 }
 .collapsed {
   display: none;
+}
+.rotate__arrow {
+  transform: rotate(180deg);
 }
