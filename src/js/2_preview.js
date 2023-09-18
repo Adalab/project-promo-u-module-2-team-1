@@ -24,27 +24,77 @@ const previewGithub = document.querySelector('.js-preview-github');
 // const previewPhoto = document.querySelector ('.js-preview-photo');
 const previewLateralDec = document.querySelector('.js-lateral-decoration');
 
+//Botón reset
+const rstBtn = document.querySelector('.js-reset-buton');
+
+//Valores por defecto
+const previewNameDefault = 'Nombre Apellido';
+const previewJobDefault = 'Front-end developer';
+
 const data = {
   palette: 1,
-  name: 'María García',
-  job: 'Front-end developer',
-  phone: '+34 666666666',
-  email: 'mariagar@example.com',
-  linkedin: 'mariagar',
-  github: 'mariagar',
-  photo: 'data:image/png;base64,2342ba...',
+  name: '',
+  job: '',
+  phone: '',
+  email: '',
+  linkedin: '',
+  github: '',
+  photo: '',
 };
 
-function updatePreview() {
-  previewName.innerHTML = data.name;
+// FUNCIONES
+//CONDICIONALES PARA DEVOLVER EL VALOR POR DEFECTO EN NOMBRE Y PUESTO
 
-  //añadir if para que se muestre Nombre Apellido al borrar la usuaria
-  previewEmail.href = `mailto:${data.email}`;
+function checkEmptyName() {
+  if (inputName.value === '') {
+    data.name = previewNameDefault;
+  } else {
+    data.name = inputName.value;
+  }
+}
+function checkEmptyJob() {
+  if (inputJob.value === '') {
+    data.job = previewJobDefault;
+  } else {
+    data.job = inputJob.value;
+  }
+}
+// ACTUALIZAR DATOS DE TARJETA DE PREVIEW
+function updatePreview() {
+  checkEmptyName();
+  checkEmptyJob();
+  previewName.innerHTML = data.name;
   previewJob.innerHTML = data.job;
+  previewEmail.href = `mailto:${data.email}`;
   previewPhone.href = `tel:+34${data.phone}`;
   previewLinkedin.href = `https://www.linkedin.com/in/${data.linkedin}`;
   previewGithub.href = `https://github.com/${data.github}`;
 }
+// BORRAR @ DE GITHUB
+function deleteGithubAtSign() {
+  const withAts = data.github;
+  const withoutAts = withAts.replace(/@/, '');
+  data.github = withoutAts;
+}
+// RESETEAR DATOS
+function resetData() {
+  inputName.value = '';
+  inputJob.value = '';
+  inputPhone.value = '';
+  inputEmail.value = '';
+  inputLinkedin.value = '';
+  inputGithub.value = '';
+  data.name = inputName.value;
+  data.job = inputJob.value;
+  data.phone = inputPhone.value;
+  data.email = inputEmail.value;
+  data.linkedin = inputLinkedin.value;
+  data.github = inputGithub.value;
+}
+
+//QUE EMPIECE LA FIESTA
+
+updatePreview();
 
 function handleInputName() {
   data.name = inputName.value;
@@ -68,6 +118,11 @@ function handleInputLinkedin() {
 }
 function handleInputGithub() {
   data.github = inputGithub.value;
+  deleteGithubAtSign();
+  updatePreview();
+}
+function handleReset() {
+  resetData();
   updatePreview();
 }
 
@@ -131,6 +186,7 @@ inputPhone.addEventListener('input', handleInputPhone);
 inputEmail.addEventListener('input', handleInputEmail);
 inputLinkedin.addEventListener('input', handleInputLinkedin);
 inputGithub.addEventListener('input', handleInputGithub);
+rstBtn.addEventListener('click', handleReset);
 
 //EVENTOS LISTENER PALETAS DE COLORES
 inputPaletteOne.addEventListener('input', handleInputPaletteOne);
