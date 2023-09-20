@@ -10,13 +10,22 @@
     flex-direction: row;
     justify-content: space-between;
   }
+  &__pickle-team {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
   &__text {
     font-family: $font-open-sans-regular;
     font-weight: 400;
     font-size: 1.4rem;
     color: $color-watermark-opacity;
   }
-  &__logo {
+  &__logo-pickle {
+    width: 5rem;
+    height: 5rem;
+  }
+  &__logo-ada {
     max-width: 10.3rem;
   }
 }
