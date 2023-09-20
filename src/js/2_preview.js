@@ -76,24 +76,8 @@ function deleteGithubAtSign() {
   const withoutAts = withAts.replace(/@/, '');
   data.github = withoutAts;
 }
-// RESETEAR DATOS
-function resetData() {
-  inputName.value = '';
-  inputJob.value = '';
-  inputPhone.value = '';
-  inputEmail.value = '';
-  inputLinkedin.value = '';
-  inputGithub.value = '';
-  data.name = inputName.value;
-  data.job = inputJob.value;
-  data.phone = inputPhone.value;
-  data.email = inputEmail.value;
-  data.linkedin = inputLinkedin.value;
-  data.github = inputGithub.value;
-}
 
-//QUE EMPIECE LA FIESTA
-
+//LET'S GET THE PARTY STARTED!
 updatePreview();
 
 function handleInputName() {
@@ -178,6 +162,24 @@ function handleInputPaletteThree() {
 
   previewGithub.style.color = '#3e5b65';
   previewGithub.style.borderColor = '#a0c0cf';
+}
+
+// RESETEAR DATOS
+function resetData() {
+  inputPaletteOne.checked = true;
+  handleInputPaletteOne();
+  inputName.value = '';
+  inputJob.value = '';
+  inputPhone.value = '';
+  inputEmail.value = '';
+  inputLinkedin.value = '';
+  inputGithub.value = '';
+  data.name = inputName.value;
+  data.job = inputJob.value;
+  data.phone = inputPhone.value;
+  data.email = inputEmail.value;
+  data.linkedin = inputLinkedin.value;
+  data.github = inputGithub.value;
 }
 
 inputName.addEventListener('input', handleInputName);
