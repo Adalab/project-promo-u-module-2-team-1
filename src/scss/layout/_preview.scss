@@ -60,6 +60,11 @@
 
     .preview__card-img {
       width: 24rem;
+      height: 24rem;
+
+      background-image: url('../images/snoopy.jpg');
+      background-size: cover;
+      background-position: center center;
     }
   }
 
