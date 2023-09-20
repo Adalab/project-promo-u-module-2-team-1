@@ -12,7 +12,7 @@ const inputPhone = document.querySelector('.js-input-phone');
 const inputEmail = document.querySelector('.js-input-email');
 const inputLinkedin = document.querySelector('.js-input-linkedin');
 const inputGithub = document.querySelector('.js-input-github');
-// const inputPhoto = document.querySelector ('.js-input-photo');
+const inputPhoto = document.querySelector('.js-input-photo');
 
 //CONSTANTES DE LA TARJETA DE PREVIEW
 const previewName = document.querySelector('.js-preview-name');
@@ -174,12 +174,16 @@ function resetData() {
   inputEmail.value = '';
   inputLinkedin.value = '';
   inputGithub.value = '';
+  inputPhoto.value = '';
   data.name = inputName.value;
   data.job = inputJob.value;
   data.phone = inputPhone.value;
   data.email = inputEmail.value;
   data.linkedin = inputLinkedin.value;
   data.github = inputGithub.value;
+  data.photo = '';
+  profileImage.style.backgroundImage = `url('./assets/images/snoopy.jpg')`;
+  profilePreview.style.backgroundImage = ``;
 }
 
 inputName.addEventListener('input', handleInputName);
