@@ -1,18 +1,11 @@
-.header-landing {
-  padding: 9.5rem 0 0;
-  background-color: $background-color-landing;
-  display: flex;
-  justify-content: center;
+.header-landing__logo {
+  padding-bottom: 3.54rem;
+  max-width: 25rem;
   @media all and (min-width: 768px) {
-    padding: 35rem 0 0;
-  }
-  &__logo {
-    max-width: 25rem;
-    @media all and (min-width: 768px) {
-      max-width: 41.9rem;
-    }
+    max-width: 41.9rem;
   }
 }
+
 .header-form {
   padding: 3.1rem 0 3rem 4rem;
   background-color: $white-two;
