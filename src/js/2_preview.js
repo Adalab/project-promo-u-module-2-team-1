@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use strict';
 
 // código del preview
