@@ -3,7 +3,9 @@
 
 const btnShare = document.querySelector('.js_btn_card');
 const msgShareError = document.querySelector('.js_share_error');
-function chihuahua() {
+const shareSection = document.querySelector('.js-share__result');
+function handleBtnShare(event) {
+  event.preventDefault();
   const patron = /^[0-9]+$/;
   if (
     inputName.value === '' ||
@@ -14,14 +16,17 @@ function chihuahua() {
     inputGithub.value === '' ||
     inputPhoto.value === ''
   ) {
-    msgShareError.innerHTML = 'la has cagado';
+    msgShareError.innerHTML = 'Faltan campos por rellenar';
   } else if (inputEmail.value.includes(`. @`)) {
     msgShareError.innerHTML = '';
+    shareSection.classList.remove('collapsed');
   } else if (patron.test(inputPhone.value)) {
     msgShareError.innerHTML = '';
+    shareSection.classList.remove('collapsed');
   } else {
-    msgShareError.innerHTML = 'la has cagado';
+    msgShareError.innerHTML = 'Faltan campos por rellenar';
   }
+  
 }
 
-btnShare.addEventListener('click', chihuahua);
+btnShare.addEventListener('click', handleBtnShare);

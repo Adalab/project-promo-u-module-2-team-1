@@ -1,11 +1,12 @@
-@import 'core/variables';
-@import 'core/reset';
-@import 'core/mixins';
-@import 'layout/page';
-@import 'layout/landing';
-@import 'layout/header';
-@import 'layout/preview';
-@import 'layout/form__design';
-@import 'layout/form__fill';
-@import 'layout/form__share';
-@import 'layout/footer';
+@import "core/variables";
+@import "core/reset";
+@import "core/mixins";
+
+@import "layout/landing";
+@import "layout/header";
+@import "layout/preview";
+@import "layout/form__design";
+@import "layout/form__fill";
+@import "layout/form__share";
+@import "layout/footer";
+@import "layout/page";

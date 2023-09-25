@@ -185,6 +185,8 @@ function resetData() {
   data.photo = '';
   profileImage.style.backgroundImage = `url('./assets/images/snoopy.jpg')`;
   profilePreview.style.backgroundImage = ``;
+  msgShareError.innerHTML = '';
+  shareSection.classList.add('collapsed');
 }
 
 inputName.addEventListener('input', handleInputName);

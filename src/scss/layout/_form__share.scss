@@ -108,7 +108,10 @@
 }
 
 .share_error {
-  color: $color-form-titles;
+  color: red;
+  font-size: 1.5rem;
+  font-family: $font-open-sans-semiB;
+  font-weight: 700;
   display: flex;
   flex-direction: column;
   align-items: center;
