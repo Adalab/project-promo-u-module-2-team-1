@@ -113,6 +113,7 @@ function handleReset() {
 
 //FUNCIÓN MANEJADORA PALETA COLORES 1
 function handleInputPaletteOne() {
+  document.getElementById('picture').src = '../images/pickles-love.jpg';
   previewName.style.color = '#114e4e';
   previewLateralDec.style.borderColor = '#438792';
 
@@ -131,6 +132,7 @@ function handleInputPaletteOne() {
 
 //FUNCIÓN MANEJADROA PALETA COLORES 2
 function handleInputPaletteTwo() {
+  document.getElementById('picture').src = '../images/pickle-nothappy.jpg';
   previewName.style.color = '#420101';
   previewLateralDec.style.borderColor = '#bd1010';
 
@@ -149,6 +151,7 @@ function handleInputPaletteTwo() {
 
 //FUNCIÓN MANEJADORA PALETA COLORES 3
 function handleInputPaletteThree() {
+  document.getElementById('picture').src = '../images/pickles-notopinion.jpg';
   previewName.style.color = '#3e5b65';
   previewLateralDec.style.borderColor = '#eab052';
 
