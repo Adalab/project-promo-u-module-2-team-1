@@ -52,12 +52,14 @@ function handleClickDesign() {
   openDesign();
   closeFill();
   closeShare();
+  msgShareError.innerHTML = '';
 }
 //Función handle listener elemento Form Fill
 function handleClickFill() {
   closeDesign();
   openFill();
   closeShare();
+  msgShareError.innerHTML = '';
 }
 //Función handle listener elemento Form Share
 function handleClickShare() {
