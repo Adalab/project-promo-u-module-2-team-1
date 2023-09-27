@@ -1,4 +1,5 @@
 
+
 # This is PickleTeam!  
 Bienvenida/o al proyecto grupal del módulo 2, del equipo PickleTeam. 
 
@@ -31,9 +32,9 @@ Hemos dotado de interactividad a la página de la siguiente manera:
 - Al rellenar el formulario podemos ver la información en directo que ha introducido la persona en la tarjeta de previsualización.
 - Al seleccionar una paleta de colores del formulario, estos se aplican en directo en la previsualización de la tarjeta.
 
-## Siguientes pasos: encarando el sprint dos.
+## Historias de usuario cubiertas en el segundo sprint:
 
-En el próximo sprint desarrollaremos las partes restantes: 
+A continuación, en el segundo sprint, nos hemos centrado en el desarrollo de:
 
 3. **Versión interactiva II:**
 Actualizar la foto en la vista previa de la tarjeta y hacer funcional el apartado de compartir en Twitter. 
@@ -62,7 +63,4 @@ Así mismo, no seas una persona tímida y **¡déjanos tu feedback!**
 
 
 ![Alt Text](https://media.tenor.com/cXUMxqwqgT8AAAAC/piclel-dancing.gif)
-
-
-
 
