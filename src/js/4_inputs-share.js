@@ -46,7 +46,7 @@ function handleBtnShare(event) {
         shareSection.classList.remove('collapsed');
         urlCard.href = responseJSON.cardURL;
         urlCard.innerHTML = responseJSON.cardURL;
-        urlTwitter.href = `https://twitter.com/intent/tweet?url=${responseJSON.cardUR}&text=Ya%20estoy%20suscrita%20al%20Adalab%20Tech%20Summit%21%21%21&hashtags=Adalab`;
+        urlTwitter.href = `https://twitter.com/intent/tweet?url=${responseJSON.cardURL}&text=Ya%20estoy%20suscrita%20al%20Adalab%20Tech%20Summit%21%21%21&hashtags=Adalab`;
       }
     });
   localStorage.setItem('definitiveCard', JSON.stringify(responseJSON));
