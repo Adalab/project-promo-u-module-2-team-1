@@ -48,8 +48,8 @@ function handleBtnShare(event) {
         urlCard.innerHTML = responseJSON.cardURL;
         urlTwitter.href = `https://twitter.com/intent/tweet?url=${responseJSON.cardURL}&text=Ya%20estoy%20suscrita%20al%20Adalab%20Tech%20Summit%21%21%21&hashtags=Adalab`;
       }
+      localStorage.setItem('definitiveCard', JSON.stringify(data));
     });
-  localStorage.setItem('definitiveCard', JSON.stringify(responseJSON));
 }
-
+const dataLS = JSON.parse(localStorage.getItem('definitiveCard'));
 btnShare.addEventListener('click', handleBtnShare);
