@@ -1,6 +1,6 @@
 
 # This is PickleTeam!  
-Bienvenida/o al proyecto grupal del módulo 2, primer sprint, del equipo PickleTeam. 
+Bienvenida/o al proyecto grupal del módulo 2, del equipo PickleTeam. 
 
 ## Equipo:
 PickleTeam está formado por: 
