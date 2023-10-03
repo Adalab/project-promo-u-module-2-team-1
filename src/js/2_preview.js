@@ -6,6 +6,7 @@
 const inputPaletteOne = document.querySelector('.js-input-palette-one');
 const inputPaletteTwo = document.querySelector('.js-input-palette-two');
 const inputPaletteThree = document.querySelector('.js-input-palette-three');
+
 //CONSTANTES DE LOS INPUTS
 const inputName = document.querySelector('.js-input-name');
 const inputJob = document.querySelector('.js-input-job');
@@ -33,7 +34,7 @@ const previewNameDefault = 'Nombre Apellido';
 const previewJobDefault = 'Front-end developer';
 
 const data = {
-  palette: 1,
+  palette: '',
   name: '',
   job: '',
   phone: '',
@@ -127,6 +128,7 @@ function handleInputPaletteOne() {
 
   previewGithub.style.color = '#114e4e';
   previewGithub.style.borderColor = '#a2deaf';
+  data.palette = 1;
 }
 
 //FUNCIÓN MANEJADROA PALETA COLORES 2
@@ -145,6 +147,7 @@ function handleInputPaletteTwo() {
 
   previewGithub.style.color = '#420101';
   previewGithub.style.borderColor = '#bd1010';
+  data.palette = 2;
 }
 
 //FUNCIÓN MANEJADORA PALETA COLORES 3
@@ -163,6 +166,7 @@ function handleInputPaletteThree() {
 
   previewGithub.style.color = '#3e5b65';
   previewGithub.style.borderColor = '#a0c0cf';
+  data.palette = 3;
 }
 
 // RESETEAR DATOS
@@ -183,7 +187,7 @@ function resetData() {
   data.linkedin = inputLinkedin.value;
   data.github = inputGithub.value;
   data.photo = '';
-  profileImage.style.backgroundImage = `url('./assets/images/preview.png')`;
+  profileImage.style.backgroundImage = `url('./assets/images/snoopy.jpg')`;
   profilePreview.style.backgroundImage = ``;
   msgShareError.innerHTML = '';
   shareSection.classList.add('collapsed');
