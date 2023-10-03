@@ -44,6 +44,85 @@ const data = {
   photo: '',
 };
 
+var dataImage = localStorage.getItem('imgData');
+
+// let imageInput = document.getElementById('img-input');
+// imgData = getBase64Image(imageInput);
+// localStorage.setItem('imgData', imgData);
+
+// function getBase64Image(img) {
+//   var canvas = document.createElement('canvas');
+//   canvas.width = img.width;
+//   canvas.height = img.height;
+
+//   let ctx = canvas.getContext('2d');
+//   ctx.drawImage(img, 0, 0);
+
+//   let dataURL = canvas.toDataURL('image/png');
+
+//   return dataURL.replace(/^data:image\/(png|jpg);base64,/, '');
+// }
+
+// imageInput = document.getElementById('tableBanner');
+// imageInput.src = 'data:image/png;base64,' + dataImage;
+
+// Evento listener sobre las imagenes cargadas en los input tipo file con id:img-input
+
+// imageInput.addEventListener('change', (event) => {
+//   // Guarda la imagen en el localStorage
+//   const image = event.target.files[0];
+//   const reader = new FileReader();
+
+//   reader.addEventListener('load', () => {
+//     localStorage.setItem('image', reader.result);
+//   });
+
+//   if (image) {
+//     reader.readAsDataURL(image);
+//   }
+
+//   // Toma la imagen del localStorage y la muestra en el HTML
+//   const newImage = document.getElementById('img-from-local-storage');
+
+//   newImage.src = localStorage.getItem('image');
+// });
+
+function getValues() {
+  const dataLS = JSON.parse(localStorage.getItem('definitiveCard'));
+  if (dataLS !== null) {
+    // Así marcamos que paleta está siendo seleccionada por el usuario y llamando a las funciones manejadoras aplicamos el estilo de la paleta seleccionada en el HTML
+    data.palette = dataLS.palette;
+    if (dataLS.palette === 1) {
+      handleInputPaletteOne();
+      inputPaletteOne.checked = true;
+    } else if (dataLS.palette === 2) {
+      handleInputPaletteTwo();
+      inputPaletteTwo.checked = true;
+    } else {
+      handleInputPaletteThree();
+      inputPaletteThree.checked = true;
+    }
+
+    // relaciona el contenido de la variable que coge la info del localStorage con la info de data
+    data.name = dataLS.name;
+    data.job = dataLS.job;
+    data.phone = dataLS.phone;
+    data.email = dataLS.email;
+    data.linkedin = dataLS.linkedin;
+    data.github = dataLS.github;
+    data.photo = dataLS.photo;
+    // una vez hecha la relación anterior, hay que pintarlo en el html:
+    inputName.value = data.name;
+    inputJob.value = data.job;
+    inputPhone.value = data.phone;
+    inputEmail.value = data.email;
+    inputLinkedin.value = data.linkedin;
+    inputGithub.value = data.github;
+    // inputPhoto.value = data.photo;
+  }
+}
+getValues();
+
 // FUNCIONES
 //CONDICIONALES PARA DEVOLVER EL VALOR POR DEFECTO EN NOMBRE Y PUESTO
 

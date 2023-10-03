@@ -1,2 +1,2 @@
+/* eslint-disable no-undef */
 'use strict';
-document.addEventListener('DOMContentLoaded', getValues);

@@ -70,18 +70,4 @@ function handleBtnShare(event) {
   }
 }
 
-const dataLS = JSON.parse(localStorage.getItem('definitiveCard'));
-function getValues() {
-  if (dataLS !== null) {
-    data.palette = dataLS.palette;
-    data.name = dataLS.name;
-    data.job = dataLS.job;
-    data.phone = dataLS.phone;
-    data.email = dataLS.email;
-    data.linkedin = dataLS.linkedin;
-    data.github = dataLS.github;
-    data.photo = dataLS.photo;
-  }
-}
-
 btnShare.addEventListener('click', handleBtnShare);
