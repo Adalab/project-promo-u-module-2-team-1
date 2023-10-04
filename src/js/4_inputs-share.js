@@ -1,3 +1,4 @@
+/* eslint-disable no-lonely-if */
 /* eslint-disable indent */
 /* eslint-disable no-undef */
 'use strict';
@@ -68,5 +69,5 @@ function handleBtnShare(event) {
     }
   }
 }
-const dataLS = JSON.parse(localStorage.getItem('definitiveCard'));
+
 btnShare.addEventListener('click', handleBtnShare);
