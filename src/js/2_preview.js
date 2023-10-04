@@ -227,7 +227,7 @@ function resetData() {
   data.linkedin = inputLinkedin.value;
   data.github = inputGithub.value;
   data.photo = '';
-  profileImage.style.backgroundImage = `url('./assets/images/snoopy.jpg')`;
+  profileImage.style.backgroundImage = `url('./assets/images/preview.png')`;
   profilePreview.style.backgroundImage = ``;
   msgShareError.innerHTML = '';
   shareSection.classList.add('collapsed');
