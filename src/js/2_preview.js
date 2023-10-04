@@ -6,6 +6,7 @@
 const inputPaletteOne = document.querySelector('.js-input-palette-one');
 const inputPaletteTwo = document.querySelector('.js-input-palette-two');
 const inputPaletteThree = document.querySelector('.js-input-palette-three');
+
 //CONSTANTES DE LOS INPUTS
 const inputName = document.querySelector('.js-input-name');
 const inputJob = document.querySelector('.js-input-job');
@@ -32,8 +33,11 @@ const rstBtn = document.querySelector('.js-reset-buton');
 const previewNameDefault = 'Nombre Apellido';
 const previewJobDefault = 'Front-end developer';
 
+//Revisamos si hay información en el localStorage
+const dataLS = JSON.parse(localStorage.getItem('definitiveCard'));
+
 const data = {
-  palette: 1,
+  palette: '',
   name: '',
   job: '',
   phone: '',
@@ -42,6 +46,43 @@ const data = {
   github: '',
   photo: '',
 };
+
+const image = document.getElementById('img-from-local-storage');
+function getValues() {
+  if (dataLS !== null) {
+    // Así marcamos que paleta está siendo seleccionada por el usuario y llamando a las funciones manejadoras aplicamos el estilo de la paleta seleccionada en el HTML
+    data.palette = dataLS.palette;
+    if (dataLS.palette === 1) {
+      handleInputPaletteOne();
+      inputPaletteOne.checked = true;
+    } else if (dataLS.palette === 2) {
+      handleInputPaletteTwo();
+      inputPaletteTwo.checked = true;
+    } else {
+      handleInputPaletteThree();
+      inputPaletteThree.checked = true;
+    }
+
+    // relaciona el contenido de la variable (dataLS)que coge la info del localStorage con la info del objeto data
+    data.name = dataLS.name;
+    data.job = dataLS.job;
+    data.phone = dataLS.phone;
+    data.email = dataLS.email;
+    data.linkedin = dataLS.linkedin;
+    data.github = dataLS.github;
+    data.photo = dataLS.photo;
+    // una vez hecha la relación anterior, hay que pintarlo en el html:
+    inputName.value = data.name;
+    inputJob.value = data.job;
+    inputPhone.value = data.phone;
+    inputEmail.value = data.email;
+    inputLinkedin.value = data.linkedin;
+    inputGithub.value = data.github;
+    // ponemos como imagen de fondo del div que muestra la imagen, la info que tiene dataLS.photo
+    image.style.backgroundImage = `url(${dataLS.photo})`;
+  }
+}
+getValues();
 
 // FUNCIONES
 //CONDICIONALES PARA DEVOLVER EL VALOR POR DEFECTO EN NOMBRE Y PUESTO
@@ -127,6 +168,7 @@ function handleInputPaletteOne() {
 
   previewGithub.style.color = '#114e4e';
   previewGithub.style.borderColor = '#a2deaf';
+  data.palette = 1;
 }
 
 //FUNCIÓN MANEJADROA PALETA COLORES 2
@@ -145,6 +187,7 @@ function handleInputPaletteTwo() {
 
   previewGithub.style.color = '#420101';
   previewGithub.style.borderColor = '#bd1010';
+  data.palette = 2;
 }
 
 //FUNCIÓN MANEJADORA PALETA COLORES 3
@@ -163,6 +206,7 @@ function handleInputPaletteThree() {
 
   previewGithub.style.color = '#3e5b65';
   previewGithub.style.borderColor = '#a0c0cf';
+  data.palette = 3;
 }
 
 // RESETEAR DATOS
@@ -183,7 +227,7 @@ function resetData() {
   data.linkedin = inputLinkedin.value;
   data.github = inputGithub.value;
   data.photo = '';
-  profileImage.style.backgroundImage = `url('./assets/images/preview.png')`;
+  profileImage.style.backgroundImage = `url('./assets/images/snoopy.jpg')`;
   profilePreview.style.backgroundImage = ``;
   msgShareError.innerHTML = '';
   shareSection.classList.add('collapsed');
